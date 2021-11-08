@@ -1,0 +1,299 @@
+<html lang="en">
+<head>
+	<title>Contact form</title>
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+	<!-- Bootstrap CSS library -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #F0F0F0;">
+	<!-- Bootstrap JS library -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+	</script>
+
+	<script language="javascript" type="text/javascript">
+		function dynamicdropdown(listindex) {
+			document.getElementById('00Nf400000UoydM').options.length = 0;
+			document.getElementById('st1').style.display = "block";
+			switch (listindex) {
+				case "My Orders":
+					document.getElementById("00Nf400000UoydM").options[0] = new Option("Please Select", "");
+					document.getElementById("00Nf400000UoydM").options[1] = new Option("Request status of my order",
+						"Request status of my order");
+					document.getElementById("00Nf400000UoydM").options[2] = new Option("Report discrepancies",
+						"Report discrepancies");
+					document.getElementById("00Nf400000UoydM").options[3] = new Option("Other (indicate in the comments)",
+						"Other (indicate in the comments)");
+					document.getElementById("st2").textContent = "How can we help with your order(s)? I want to...";
+					document.getElementById('st3').style.display = "block";
+					document.getElementById('st4').style.display = "none";
+					break;
+				case "My Membership/Registration":
+					document.getElementById("00Nf400000UoydM").options[0] = new Option("Please Select", "");
+					document.getElementById("00Nf400000UoydM").options[1] = new Option("Transaction History",
+						"Transaction History");
+					document.getElementById("00Nf400000UoydM").options[2] = new Option("Update Address", "Update Address");
+					document.getElementById("00Nf400000UoydM").options[3] = new Option("Login Issues", "Login Issues");
+					document.getElementById("00Nf400000UoydM").options[4] = new Option("Check Status of Membership",
+						"Check Status of Membership");
+					document.getElementById("00Nf400000UoydM").options[5] = new Option("Account contact change / update",
+						"Account contact change / update");
+					document.getElementById("00Nf400000UoydM").options[6] = new Option("Other (indicate in the comments)",
+						"Other (indicate in the comments)");
+					document.getElementById("st2").textContent = "Membership / Registration";
+					document.getElementById('st3').style.display = "none";
+					document.getElementById('st4').style.display = "none";
+					break;
+
+				case "Program Information":
+					document.getElementById("00Nf400000UoydM").options[0] = new Option("Please Select", "");
+					document.getElementById("00Nf400000UoydM").options[1] = new Option(
+						"Requirement to partner with local retail store", "Requirement to partner with local retail store"
+					);
+					document.getElementById("00Nf400000UoydM").options[2] = new Option(
+						"Getting approved to receive a truckload", "Getting approved to receive a truckload");
+					document.getElementById("00Nf400000UoydM").options[3] = new Option(
+						"Becoming a community redistribution partner", "Becoming a community redistribution partner");
+					document.getElementById("st2").textContent = "Program Information";
+					document.getElementById('st3').style.display = "none";
+					document.getElementById('st4').style.display = "none";
+					break;
+
+				case "My Retail Match Program":
+					document.getElementById("00Nf400000UoydM").options[0] = new Option("Please Select", "");
+					document.getElementById("00Nf400000UoydM").options[1] = new Option(
+						"No communication from store associates", "No communication from store associates");
+					document.getElementById("00Nf400000UoydM").options[2] = new Option(
+						"Issue with donation quality / quantity", "Issue with donation quality / quantity");
+					document.getElementById("00Nf400000UoydM").options[3] = new Option("Unable to pickup/receive donations",
+						"Unable to pickup/receive donations");
+					document.getElementById("00Nf400000UoydM").options[4] = new Option(
+						"Requesting authorization forms or partnership dates",
+						"Requesting authorization forms or partnership dates");
+					document.getElementById("00Nf400000UoydM").options[5] = new Option("Partnership renewal / billing",
+						"Partnership renewal / billing");
+					document.getElementById("00Nf400000UoydM").options[6] = new Option("Other (indicate in the comments)",
+						"Other (indicate in the comments)");
+					document.getElementById("st2").textContent = "What is your concern?";
+					document.getElementById('st3').style.display = "none";
+					document.getElementById('st4').style.display = "block";
+					break;
+
+				case "Report improper use of donated goods":
+					document.getElementById("00Nf400000UoydM").options[0] = new Option("Please Select", "");
+					document.getElementById("00Nf400000UoydM").options[1] = new Option(
+						"Donated products being returned to a retailer", "Donated products being returned to a retailer");
+					document.getElementById("00Nf400000UoydM").options[2] = new Option("Nonprofit returning donated goods",
+						"Nonprofit returning donated goods");
+					document.getElementById("00Nf400000UoydM").options[3] = new Option(
+						"Nonprofit asking for a donation in exchange for donated goods",
+						"Nonprofit asking for a donation in exchange for donated goods");
+					document.getElementById("00Nf400000UoydM").options[4] = new Option("Other (indicate in the comments)",
+						"Other (indicate in the comments)");
+					document.getElementById("st2").textContent = "Sorry to hear that. What do you need to report?";
+					document.getElementById('st3').style.display = "none";
+					document.getElementById('st4').style.display = "none";
+					break;
+
+			}
+			return true;
+		}
+	</script>
+	<script language="javascript" type="text/javascript">
+		function showInfoAlert(message) {
+			document.getElementById('alertcontent').textContent = "";
+			document.getElementById('alertbox').style.display = "none";
+			switch (message) {
+				case "Request status of my order":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>We are available to provide live support Monday – Friday 9am – 5pm est. <a href='https://www.livehelpnow.net/lhn/lcv.aspx?d=0&ms=&zzwindow=0&lhnid=2837' target='_blank'>Click here to interact with a live agent.</a></p><p>If you do not wish to chat or after hours, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Transaction History":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>As a member you have access to view all your organization transactions through the Marketplace Dashboard. You will need to sign in using email address and password. <a href='https://good360.org/marketplace/dashboard/' target='_blank'>Click here to view your transactions.</a><br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Update Address":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>As a member you have access to view all your organization transactions through the Marketplace Dashboard. You will need to sign in using email address and password. <br /><a href= 'https://good360.org/marketplace/dashboard/account' target='_blank'>Click here to update the shipping address</a>, click on the pencil icon next to Address. You can edit an existing address or create a new one. Shipping addresses are reviewed and subject to approval by our Member Services team. We cannot ship to PO Boxes.<br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Account contact change / update":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>As a member you have access to view all your organization transactions through the Marketplace Dashboard. You will need to sign in using email address and password. <br /><a href= 'https://good360.org/marketplace/dashboard/account' target='_blank'>Click here to update the shipping address</a>, click on the pencil icon next to Address. You can edit an existing address or create a new one. Shipping addresses are reviewed and subject to approval by our Member Services team. We cannot ship to PO Boxes.<br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Login Issues":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p><a href='https://good360.org/marketplace/customer/account/login' target='_blank'>Click here to log in and/or reset your password.</a> Enter your email address and the password chosen when you first signed up. If you have forgotten your password, you can click the forgot password link to reset it.<br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Requirement to partner with local retail store":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>You can learn more about our retail matching program on <a href='https://good360.org/nonprofit/retail-donation-partner/' target='_blank'>our dedicated landing page.</a><br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Getting approved to receive a truckload":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>You can learn more about truckload quantity donation on <a href='https://good360.org/nonprofit/truckload/' target='_blank'>our dedicated landing page.</a> If you believe you will qualify, you can start <a href='https://good360.org/nonprofit/truckload/direct-truckload-program-application/' target='_blank'>your application process.</a><br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Becoming a community redistribution partner":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>You can learn more about our CRP program on <a href='https://good360.org/nonprofit/community-redistribution-partner/' target='_blank'>our dedicated landing page.</a><br />If you need further assistance, continue and submit this form.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "No communication from store associates":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>Just as this program is new to you, it is also new to your retail store match partner.  We can see the partnership take anywhere from 30-60 days from the official start date until you receive your first donation. We ask that you not contact your partnered store until the store has reached out to your organization first.<br />If you still have not heard from your partnered store 60 days after your official start date, please <a href='https://outlook.office365.com/owa/calendar/Good360RetailPrograms@good360.org/bookings/' target='_blank'>follow this link</a> to connect with a member of the Retail Match Team, so we can best address your concerns.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Issue with donation quality / quantity":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>Have you logged your donations in your donation tracking tool? You can access it on <a href='https://good360.org/marketplace/dashboard/' target='_blank'>your dashboard.</a> This will help us better resolve any issues that should arise during your partnership. <br />If you still need assistance, please <a href='https://outlook.office365.com/owa/calendar/Good360RetailPrograms@good360.org/bookings/' target='_blank'>follow this link</a> to connect with a member of the Retail Match Team, so we can best address your concerns.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Unable to pickup/receive donations":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>Please <a href='https://outlook.office365.com/owa/calendar/Good360RetailPrograms@good360.org/bookings/' target='_blank'>follow this link</a> to connect with a member of the Retail Match Team, so we can best address your concerns.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;
+				case "Requesting authorization forms or partnership dates":
+					document.getElementById('alertcontent').innerHTML =
+						"<h4 class='alert heading'>QUICK TIP</h4><p>As a member, you have access to view your partnerships’ data through <a href='https://good360.org/marketplace/dashboard/' target='_blank'>the Member Dashboard.</a> You will find all your authorization forms and partnership information listed there.</p>";
+					document.getElementById('alertbox').style.display = "block";
+					break;		
+			}
+			return true;
+		}
+	</script>
+
+	<form action="https://good360us--lashownasb.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+		method="POST">
+
+		<input type=hidden name="orgid" value="00D3C0000004xHo">
+		<input type=hidden name="retURL" value="https://good360.org/contact/">
+
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+		<!--  these lines if you wish to test in debug mode.                          -->
+		<!--  <input type="hidden" name="debug" value=1>                              -->
+		<!--  <input type="hidden" name="debugEmail" value="vrushank@good360.org">    -->
+		<!--  ----------------------------------------------------------------------  -->
+		<div style="text-align: center;">
+			<span style="font-family: helvetica, arial, sans-serif; font-size: 18pt; color: #1f76b6;">GET
+				<strong>GOOD</strong> SUPPORT - Current Members</span>
+		</div>
+		<div style="border: 1px solid #a5a5a5; padding-inline: 20px;">
+			<div class="form-group">
+				<label class="form-label" for="00N3C000005rNHP"> What is your reason to contact us?</label>
+				<select class="form-select" style="width: 50%;" id="00N3C000005rNHP" name="00N3C000005rNHP"
+					title="Case Reason Type" required
+					onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+					<option value="">--None--</option>
+					<option value="My Orders">My Orders</option>
+					<option value="My Membership/Registration">My Membership/Registration</option>
+					<option value="Program Information">Program Information</option>
+					<option value="My Retail Match Program">My Retail Match Program</option>
+					<option value="Report improper use of donated goods">Report improper use of donated goods</option>
+				</select>
+			</div>
+
+			<div style="display:none;" id="st4">
+				<label class="form-label" for="00Nf400000UppzC">With which retail match program do you have concerns?
+					)</label>
+				<select class="form-select" id="00Nf400000UppzC" style="width: 50%;" name="00Nf400000UppzC"
+					title="Retail Match Program">
+					<option value="">--None--</option>
+					<option value="Advance Auto Parts">Advance Auto Parts</option>
+					<option value="Amazon">Amazon</option>
+					<option value="American Girl">American Girl</option>
+					<option value="Bed Bath &amp; Beyond">Bed Bath &amp; Beyond</option>
+					<option value="Brooklinen">Brooklinen</option>
+					<option value="CVS">CVS</option>
+					<option value="Disney">Disney</option>
+					<option value="Harmon Face Values">Harmon Face Values</option>
+					<option value="QVC - HSN - LaZboy">QVC - HSN - LaZboy</option>
+					<option value="Nike">Nike</option>
+					<option value="Toys for Tots">Toys for Tots</option>
+					<option value="Walmart">Walmart</option>
+					<option value="Williams Sonoma - Pottery Barn">Williams Sonoma - Pottery Barn</option>
+					<option value="Other">Other</option>
+				</select>
+			</div>
+
+			<div class="form-group" style="display:none;" id="st1">
+				<div id="st2"></div>
+				<script type="text/javascript" language="JavaScript">
+					document.write(
+						'<select class="form-select" id="00Nf400000UoydM" required style = "width: 50%;"  name="00Nf400000UoydM" title="Sub-Issue" onchange="javascript: showInfoAlert(this.options[this.selectedIndex].value)"><option value="">--None--</option></select><br />'
+					)
+				</script>
+			</div>
+
+			<div class="form-group" style="display:none;" id="st3">
+				<label class="form-label" for="00Nf400000VAjZS">Order Number(s)</label>
+				<textarea class="form-control" id="00Nf400000VAjZS" style="width: 50%;" name="00Nf400000VAjZS"
+					type="text" wrap="soft"></textarea><br />
+			</div>
+
+			<div style="display: none;" class="alert alert-success" role="alert" id="alertbox">
+				<div id="alertcontent"></div>
+			</div>
+
+			<div class="form-group">
+				<label for="company">Your nonprofit name <sup><strong>*</strong></sup+></label>
+				<input class="form-control" style="width: 50%;" required id="company" maxlength="80" name="company"
+					size="20" type="text" />
+			</div>
+
+			<div class="form-group">
+				<label class="form-label" for="00Nf400000UoydJ">Your nonprofit employer identification number
+					(EIN)</label>
+				<input class="form-control" style="width: 50%;" id="00Nf400000UoydJ" maxlength="100"
+					name="00Nf400000UoydJ" size="20" type="text"
+					placeholder="You can lookup your EIN at https://guidestar.org if you do not know it." />
+			</div>
+
+			<div class="form-group">
+				<label class="form-label" for="name">Your name</label>
+				<input class="form-control" style="width: 50%;" required id="name" maxlength="80" name="name" size="20"
+					type="text" />
+			</div>
+
+			<div class="form-group">
+				<label for="email">Your email</label>
+				<input class="form-control" style="width: 50%;" required id="email" maxlength="80" name="email"
+					size="20" type="email" />
+			</div>
+
+			<div class="form-group">
+				<label for="phone">Your phone number</label>
+				<input class="form-control" class="form-control" style="width: 50%;" required id="phone" name="phone"
+					type="tel" />
+			</div>
+
+			<div class="form-group">
+				<label for="subject">Subject</label>
+				<input class="form-control" style="width: 50%;" required id="subject" maxlength="80" name="subject"
+					size="20" type="text" />
+			</div>
+
+			<div class="form-group">
+				<label for="description">More information</label>
+				<textarea class="form-control" style="width: 50%;" required name="description"></textarea>
+			</div>
+			<br />
+			<div class="form-group" style="text-align: center;">
+				<input class="btn btn-lg btn-success" type="submit" name="submit">
+			</div>
+			<br />
+		</div>
+	</form>
+
+</body>
+
+</html>
